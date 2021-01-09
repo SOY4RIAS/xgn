@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "domix",
+    "domix/typescript"
+  ],
+  "rules": {
+    "no-console": "off"
+  }
+}
