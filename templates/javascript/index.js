@@ -1,1 +1,1 @@
-console.log('TEMPLATE JS');
+console.log('hello world with tempalte `<%= projectName %>`');

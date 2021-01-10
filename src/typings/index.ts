@@ -7,14 +7,17 @@ export interface Options {
   runInstall: boolean;
   targetDir: string;
   templateDir?: string;
+  projectName?: string;
 }
 
 export interface Questions {
   git: DistinctQuestion;
+  projectName: DistinctQuestion;
   template: DistinctQuestion;
 }
 
 export interface Answers {
-  template: string;
   git: boolean;
+  projectName: string;
+  template: string;
 }

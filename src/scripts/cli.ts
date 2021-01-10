@@ -1,8 +1,8 @@
 import arg from 'arg';
-import inquirer, { Answers, DistinctQuestion } from 'inquirer';
+import inquirer, { DistinctQuestion } from 'inquirer';
 
 import { QUESTIONS } from '../questions';
-import { Options } from '../typings';
+import { Answers, Options } from '../typings';
 import { ARGUMENTS, ALIAS, TEMPLATES } from '../utils/constants';
 import { create } from './create';
 
@@ -38,6 +38,8 @@ async function promptForMissingOptions(options: Options): Promise<Options> {
 
   const questions: DistinctQuestion[] = [];
 
+  questions.push(QUESTIONS.projectName);
+
   if (!options.template) {
     questions.push(QUESTIONS.template);
   }
@@ -50,8 +52,9 @@ async function promptForMissingOptions(options: Options): Promise<Options> {
 
   return {
     ...options,
-    template: options.template || answers.template,
-    git: options.git || answers.git
+    git: options.git || answers.git,
+    projectName: answers.projectName,
+    template: options.template || answers.template
   };
 }
 

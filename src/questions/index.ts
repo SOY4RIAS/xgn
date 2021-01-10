@@ -1,15 +1,24 @@
 import { Questions } from '../typings';
-import { TEMPLATES } from '../utils/constants';
-
-const templateChoices = [TEMPLATES.JAVASCRIPT, TEMPLATES.TYPESCRIPT];
+import { NON_WHITE_SPACE, TEMPLATES } from '../utils/constants';
 
 export const QUESTIONS: Questions = {
+  projectName: {
+    type: 'input',
+    name: 'projectName',
+    default: 'my-project',
+    validate: (input: string) => {
+      if (!NON_WHITE_SPACE.test(input)) {
+        return 'Project Name should be with non-whitespace characters';
+      }
+
+      return true;
+    }
+  },
   template: {
     type: 'list',
     name: 'template',
     message: 'Please choose which project template to use',
-    choices: templateChoices,
-    default: templateChoices
+    choices: () => [TEMPLATES.JAVASCRIPT, TEMPLATES.TYPESCRIPT]
   },
   git: {
     type: 'confirm',

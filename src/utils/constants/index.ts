@@ -1,4 +1,5 @@
 export * from './cli';
+export * from './regex';
 
 export const APP_NAME = 'XGN';
 

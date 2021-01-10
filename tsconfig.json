@@ -15,6 +15,7 @@
     "resolveJsonModule": true
   },
   "exclude": [
-    "./templates"
+    "./templates/**/*",
+    "./lib/**/*"
   ]
 }
