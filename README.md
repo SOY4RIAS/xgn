@@ -22,7 +22,7 @@
 ## Install
 
 ```sh
-npm install -g
+npm install -g xgn
 ```
 
 ## Usage
