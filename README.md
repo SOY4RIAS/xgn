@@ -22,13 +22,13 @@
 ## Install
 
 ```sh
-npm install
+npm install -g
 ```
 
 ## Usage
 
 ```sh
-npm install -g xgn
+xgn
 ```
 
 ## Run tests
