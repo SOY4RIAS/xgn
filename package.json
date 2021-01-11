@@ -1,6 +1,6 @@
 {
   "name": "xgn",
-  "version": "1.0.0-0",
+  "version": "1.0.0",
   "description": "`xgn` is a CLI, project generator",
   "keywords": [
     "cli",
