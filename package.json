@@ -12,7 +12,7 @@
     "create": "npm run build && npm run test",
     "prebuild": "npm run clean",
     "build": "tsc -p .",
-    "test": "npm i -g && xgn",
+    "test:manual": "npm i -g && xgn",
     "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
   },
   "keywords": [
