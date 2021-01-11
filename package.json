@@ -2,19 +2,6 @@
   "name": "xgn",
   "version": "1.0.0-0",
   "description": "`xgn` is a CLI, project generator",
-  "main": "./lib/index.js",
-  "bin": {
-    "xgn": "./lib/index.js"
-  },
-  "scripts": {
-    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
-    "clean": "rimraf lib",
-    "create": "npm run build && npm run test",
-    "prebuild": "npm run clean",
-    "build": "tsc -p .",
-    "test:manual": "npm i -g && xgn",
-    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
-  },
   "keywords": [
     "cli",
     "xgn",
@@ -26,7 +13,29 @@
     "email": "sanx349@gmail.com",
     "url": "https://github.com/soy4rias"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SOY4RIAS/xgn.git"
+  },
+  "homepage": "https://github.com/SOY4RIAS/xgn#readme",
+  "bugs": {
+    "email": "me@santiagoarias.tech",
+    "url": "https://github.com/SOY4RIAS/xgn/issues"
+  },
   "license": "MIT",
+  "scripts": {
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "clean": "rimraf lib",
+    "create": "npm run build && npm run test",
+    "prebuild": "npm run clean",
+    "build": "tsc -p .",
+    "test:manual": "npm i -g && xgn",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
+  },
+  "main": "./lib/index.js",
+  "bin": {
+    "xgn": "./lib/index.js"
+  },
   "devDependencies": {
     "@types/ejs": "^3.0.5",
     "@types/figlet": "^1.2.1",
@@ -53,9 +62,5 @@
     "pkg-install": "^1.0.0",
     "rimraf": "^3.0.2",
     "yargs": "^16.2.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:SOY4RIAS/xgn.git"
   }
 }
